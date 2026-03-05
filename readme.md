@@ -34,7 +34,7 @@ Fill in your `.env`:
 
 ```env
 PORT=5001
-MONGO_URI=mongodb+srv://kishanth:20021209kK%24@cluster0.1cqlydu.mongodb.net
+MONGO_URI=your_URI
 JWT_SECRET=your_secret_key
 JWT_EXPIRES_IN=7d
 ```
@@ -59,4 +59,3 @@ You can import the Postman collection to test all API endpoints:
 [Download Postman Collection](./postman/Simple_Support_Ticketing_API.postman_collection.json)
 
 ---
-
