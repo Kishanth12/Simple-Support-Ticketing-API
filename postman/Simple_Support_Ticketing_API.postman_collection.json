@@ -1,0 +1,306 @@
+{
+  "info": {
+    "_postman_id": "defe635b-6d03-40dd-9a34-c794cb2c28ff",
+    "name": "Simple Support Ticketing API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "38856022"
+  },
+  "item": [
+    {
+      "name": "register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"kishanth\",\r\n    \"email\": \"kish@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5001/api/auth/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"kish@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5001/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "createTicket",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YThmMDFiMGM2YmM4M2IzZGVjZTI2NSIsImlhdCI6MTc3MjY4MDgwMCwiZXhwIjoxNzczMjg1NjAwfQ.OX1YwdZsZHXcxE3loq-zvBJXH1b91PztzOvnbzufIIQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\":\"test1\",\r\n    \"description\":\"test\",\r\n    \"priority\":\"Low\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5001/api/tickets",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "tickets"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "updateTicket",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YThmMDFiMGM2YmM4M2IzZGVjZTI2NSIsImlhdCI6MTc3MjY4MDgwMCwiZXhwIjoxNzczMjg1NjAwfQ.OX1YwdZsZHXcxE3loq-zvBJXH1b91PztzOvnbzufIIQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\":\"test\",\r\n    \"description\":\"tested\",\r\n    \"priority\":\"Medium\",\r\n    \"status\":\"Resolved\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5001/api/tickets/69a9033e3f8a36f4068140bd",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "tickets",
+            "69a9033e3f8a36f4068140bd"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getAllTickets",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YThmMDFiMGM2YmM4M2IzZGVjZTI2NSIsImlhdCI6MTc3MjY4MDgwMCwiZXhwIjoxNzczMjg1NjAwfQ.OX1YwdZsZHXcxE3loq-zvBJXH1b91PztzOvnbzufIIQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\":\"test\",\r\n    \"description\":\"tested\",\r\n    \"priority\":\"Medium\",\r\n    \"status\":\"Resolved\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5001/api/tickets/69a8f7f5a00b43403ea604c2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "tickets",
+            "69a8f7f5a00b43403ea604c2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getByID",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YThmMDFiMGM2YmM4M2IzZGVjZTI2NSIsImlhdCI6MTc3MjY4MDgwMCwiZXhwIjoxNzczMjg1NjAwfQ.OX1YwdZsZHXcxE3loq-zvBJXH1b91PztzOvnbzufIIQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5001/api/tickets/69a8f7f5a00b43403ea604c2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "tickets",
+            "69a8f7f5a00b43403ea604c2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "deleteTicket",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YThmMDFiMGM2YmM4M2IzZGVjZTI2NSIsImlhdCI6MTc3MjY4MDgwMCwiZXhwIjoxNzczMjg1NjAwfQ.OX1YwdZsZHXcxE3loq-zvBJXH1b91PztzOvnbzufIIQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5001/api/tickets/69a8f7f5a00b43403ea604c2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "tickets",
+            "69a8f7f5a00b43403ea604c2"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YThmMDFiMGM2YmM4M2IzZGVjZTI2NSIsImlhdCI6MTc3MjY3OTIyMywiZXhwIjoxNzczMjg0MDIzfQ.gBZsGFR-fcprl0T-iEQ8mbzHXgw6ISDJA_K3RrBcUw0",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ]
+}
